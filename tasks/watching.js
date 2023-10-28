@@ -1,3 +1,4 @@
+const browserSync = require('browser-sync');
 const {
     watch,
     parallel
@@ -6,6 +7,6 @@ const {
 module.exports = function watching(cb){
     watch('src/scss/**/*.scss', parallel('styles'));
     watch('src/js/**/*.js', parallel('scripts'));
-    watch(['src/*.html', 'src/pages/*.html'], parallel('html'));
+    watch(['src/*.html', 'src/pages/*.html'], parallel('html')).on('change', browserSync.reload);
     cb();
 }
