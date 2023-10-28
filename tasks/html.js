@@ -3,7 +3,7 @@ const {
     dest
 } = require('gulp');
 
-module.exports = function scripts(){
+module.exports = function html(){
     return src([
             'src/index.html', 
             'src/pages/*.html'
