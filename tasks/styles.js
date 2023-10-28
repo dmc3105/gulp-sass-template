@@ -11,4 +11,5 @@ module.exports = function styles(){
         .pipe(concat('style.min.css'))
         .pipe(sass({outputStyle:'compressed'}))
         .pipe(dest('build/css/'))
+        .pipe(browserSync.stream());
 }

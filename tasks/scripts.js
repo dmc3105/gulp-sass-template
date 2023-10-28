@@ -10,5 +10,6 @@ module.exports = function scripts(){
     return src('src/js/main.js', {allowEmpty: true})
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(dest('build/js/'));
+        .pipe(dest('build/js/'))
+        .pipe(browserSync.stream());
 }
