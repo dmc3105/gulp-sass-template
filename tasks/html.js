@@ -2,7 +2,7 @@ const {
     src, 
     dest
 } = require('gulp');
-const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync');
 
 module.exports = function html(){
     return src([
@@ -12,6 +12,5 @@ module.exports = function html(){
             allowEmpty: true,
             base: 'src'
         })
-        .pipe(dest('build/'))
-        .pipe(browserSync.reload());
+        .pipe(dest('build/'));
 }
