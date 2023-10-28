@@ -4,7 +4,7 @@ const {
 } = require('gulp');
 const browserSync = require('browser-sync').create();
 
-module.exports = function scripts(){
+module.exports = function html(){
     return src([
             'src/index.html', 
             'src/pages/*.html'
