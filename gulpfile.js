@@ -8,6 +8,7 @@ exports.scripts = tasks.scripts;
 exports.serve = tasks.serve;
 exports.styles = tasks.styles;
 exports.watching = tasks.watching;
+exports.assets = tasks.assets;
 
 exports.default = series(
     exports.cleaning,
@@ -15,6 +16,7 @@ exports.default = series(
         exports.html,
         exports.scripts,
         exports.styles,
+        exports.assets,
     ),
     parallel(
         exports.serve,
